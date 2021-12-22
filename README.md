@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Customer_Churn_Prediction
 ==============================
 
