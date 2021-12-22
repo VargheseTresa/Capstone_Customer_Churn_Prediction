@@ -66,13 +66,13 @@ Telco is a fictional telecommunications company that provided home phone and Int
 
 > * [IBM Accelerator catalog](https://community.ibm.com/accelerators/catalog/content/Telco-customer-churn)
     This dataset includes demographics information about customer such as gender, dependents, etc. as well as specific information on type of services the customer have with the company. The target column contains the churn info. It has the value 1 if the customer has left the company. Otherwise, it has the value of 0.
-> * [United States zipcodes database](https://www.unitedstateszipcodes.org/ca/#zips-list)
+> * [United States zip codes database](https://www.unitedstateszipcodes.org/ca/#zips-list)
     This dataset maps the zip codes to county name. This helps in better management of categorical feature without losing much information on customer's geographic location.
     
 ## 2. Method
 
 
-## 3. Data Cleaning
+## 2.1 Data Cleaning
 [Data Cleaning Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_wrangling_v1.ipynb)
 
 [Data preprocessing Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_preprocessing.ipynb)
