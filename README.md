@@ -92,9 +92,9 @@ The dataset includes 7043 observations about telecommunication customers from Ca
 
 **Analysis of target variable**
 
-It appears that we have an imbalanced target class with approximately 27% customers with churn = 1 class and 73% customers with churn = 0 class. Also, customers who churn have relatively high churn score value or on mon to month contract as depicted below.
+It appears that we have an imbalanced target class with approximately 27% customers with churn = 1 class and 73% customers with churn = 0 class. Also, customers who churn have relatively high churn score value or on month-to-month contract as depicted below.
 
-![](./images/distribution_of_target.png)
+![](./reports/figures/distribution_of_target.png)
 ![](./images/churn_value_vs_score.png)
 ![](./images/churn_contract.png)
 
