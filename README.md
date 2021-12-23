@@ -80,6 +80,7 @@ Telco is a fictional telecommunications company that provided home phone and Int
 The dataset includes 7043 observations about telecommunication customers from California. Out of the 7043 customers, 27% of the customers left the company in the end of Q3. Each observation contains various columns related to the customer and the type of services they use. 
 
 **Handling of missing values:**
+
 Only the columns `Churn Reason` and `Total Charges` columns have missing values. 
 * `Total Charges` column has 11 missing values. This column is correlated with `Monthly Charges` and `Tenure Months` column. Hence we can safely drop this column. 
 * `Churn Reason`  values are missing only for those observations with `Churn Label` = No. Thus it represents the customers that are still with the company and it definitely makes sense for those customers to have null value for `Churn Reason` column. Thus it is an attribute whose values cannot be obtained at the time of prediction. To avoid data leakage, we drop this column as well
