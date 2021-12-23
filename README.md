@@ -122,6 +122,10 @@ To determine how useful is the feature `churn score` in predicting the probabili
 
 It is evident that customers who churn have higher churn score. Bootstrapping technique is applied to statistically estimate the confidence interval for the difference in mean churn score for customers who churn and customers who do not churn. The 95% confidence interval of the difference between mean churn scores of customers from both categories is estimated to be between 31.74 and 33.01.
 
+### Correlation Analysis
+
+There is strong correlation between columns related to geography such as Zip Code, Lattitude and Longitude. Also, target variable `Churn Value` is **negatively correlated** with `Tenure months` and **positively correlated** with `Churn Score`.
+
 
 ## 5. Algorithms & Machine Learning
 
