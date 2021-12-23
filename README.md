@@ -77,8 +77,15 @@ Telco is a fictional telecommunications company that provided home phone and Int
 
 [Data preprocessing Report](https://github.com/VargheseTresa/Capstone_Customer_Churn_Prediction/blob/main/notebooks/3.0_preprocessing.ipynb)
 
-The dataset includes 7043 observations about telecommunication customers from California. Out of the 7043 customers, 27% of the customers left the company in the end of Q3. Each observation contains various columns related to the customer and the type of services they use. There are no missing values in any columns except `Churn Reason`. This column has a value only for those customers who left the company. The preprocessing steps performed on other columns are described below.
+The dataset includes 7043 observations about telecommunication customers from California. Out of the 7043 customers, 27% of the customers left the company in the end of Q3. Each observation contains various columns related to the customer and the type of services they use. 
 
+**Handling of missing values:**
+Only the columns `Churn Reason` and `Total Charges` columns have missing values. 
+* `Total Charges` column has 11 missing values. This column is correlated with `Monthly Charges` and `Tenure Months` column. Hence we can safely drop this column. 
+* `Churn Reason`  values are missing only for those observations with `Churn Label` = No. Thus it represents the customers that are still with the company and it definitely makes sense for those customers to have null value for `Churn Reason` column. Thus it is an attribute whose values cannot be obtained at the time of prediction. To avoid data leakage, we drop this column as well
+There are no missing values in any columns except `Churn Reason`. This column has a value only for those customers who left the company. The preprocessing steps performed on other columns are described below.
+
+**Preprocessing and feature engineering**
 * **Preprocessing of numerical columns:** The identified numerical columns are `Tenure Months`, `Monthly Charges`, `Total Charges`, `Churn Score` and `CLTV`. Out of these, Monthly Charges and Total Charges are highly correlated. Hence, we keep only one of these columns. Also, as all the columns are in different scales, they are normalized to be on the same scale. This prevents columns with high magnitude such as CLTV from dominating over other low magnitude columns.
 
 * **Preprocessing of categorical columns:** The low cardinality categorical columns that are important to predict customer churn  identified are `Gender`,`Senior Citizen`,`Partner`,`Dependents`,`Phone Service`,`Multiple Lines`,`Internet Service`,`Online Security`,`Online Backup`,`Device Protection`,`Tech Support`,`Streaming TV`,`Streaming Movies`,`Contract`,`Paperless Billing` and `Payment Method`. The categorical values in these columns are encoded using one-hot encoding technique.
