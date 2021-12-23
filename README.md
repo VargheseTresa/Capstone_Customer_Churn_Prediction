@@ -95,20 +95,24 @@ The dataset includes 7043 observations about telecommunication customers from Ca
 It appears that we have an imbalanced target class with approximately 27% customers with churn = 1 class and 73% customers with churn = 0 class. Also, customers who churn have relatively high churn score value or on month-to-month contract as depicted below.
 
 ![](./reports/figures/distribution_of_target.png)
-![](./images/churn_value_vs_score.png)
-![](./images/churn_contract.png)
+![](./reports/figures/churn_value_vs_score.png)
+![](./reports/figures/churn_contract.png)
 
 Some other interesting relationships identified during EDA are shown below.
 
-![](./images/churn_internet.png)
-![](./images/churn_reason.png)
+![](./reports/figures/churn_internet.png)
+![](./reports/figures/churn_reason.png)
 
 
 Approximately 70% of the customers who left the company had Fibre Optic Internet service. This along with above data which indicates that better internet service from competitor could be a significant factor leading to customer churn.
 
-### Statistical estimation of mean churn score for customers who churn
+### Statistical estimation of average churn score of customers who churn
 
-Bootstrapping technique was applied to statistically estimate the confidence interval for the difference in mean churn score for customers who churn and customers who do not churn. The 95% confidence interval of the difference between mean churn scores of customers from both categories is estimated to be between 31.74 and 33.01.
+To determine how useful is the feature `churn score` in predicting the probability of customer churn, we look at the distribution of churn score and mean churn score for customers who churn and who do not churn.
+
+![](./reports/figures/churn_score_dist.png)
+
+It is evident that customers who churn have higher churn score. Bootstrapping technique is applied to statistically estimate the confidence interval for the difference in mean churn score for customers who churn and customers who do not churn. The 95% confidence interval of the difference between mean churn scores of customers from both categories is estimated to be between 31.74 and 33.01.
 
 
 ## 5. Algorithms & Machine Learning
