@@ -122,21 +122,32 @@ To determine how useful is the feature `churn score` in predicting the probabili
 
 It is evident that customers who churn have higher churn score. Bootstrapping technique is applied to statistically estimate the confidence interval for the difference in mean churn score for customers who churn and customers who do not churn. The 95% confidence interval of the difference between mean churn scores of customers from both categories is estimated to be between 31.74 and 33.01.
 
-### Correlation Analysis
-
-There is strong correlation between columns related to geography such as Zip Code, Lattitude and Longitude. Also, target variable `Churn Value` is **negatively correlated** with `Tenure months` and **positively correlated** with `Churn Score`.
-
 
 ## 5. Algorithms & Machine Learning
 
 [ML Notebook](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_modelling.ipynb)
 
+**Overview:**
+To predict whether a customer will churn given various attributes of the customer, we build a machine learning model. We split the available data into train (80% of data) and test sets (remaining 20% of data). We train different machine learning algorithms using the training set. Also perform hyperparameter tuning of the models using cross validation. Then compare the results to find the best model that suits our problem context. I have selected 3 machine learning algorithms for my initial review.
+
+1 . Ada Boost
+2. Linear Discriminant Analysis
+3. Light Gradient Boosting Machine
+
+
+### Model Evaluation:
+Here, accurately predicting churn = 1 is critical. If a customer is mis predicted as churn = 0, the company fails to apply necessary retention measures to retain that customer and thereby increases the chances of the customer leaving the country. Hence, our aim is to reduce the False Negatives and increase the True Positives. Thus, we give more importance to the Recall score and rank the models based on best Recall score.
+
+Best Recall score (Class: 1) = 0.845
+Model : Linear Discriminant Analysis
+
+![](./reports/figures/lda_cm.png)
 
 
 ## 6. Predictions
-[Final Predictions Notebook](https://colab.research.google.com/drive/1vLkoW_4SYessy_igmJxlVz_jEPlgJ06v)
+[Final Predictions Notebook](https://github.com/VargheseTresa/Capstone_Customer_Churn_Prediction/blob/main/notebooks/5.0_Predictions.ipynb)
 
-
+The Recall score on test set is estimated to be 0.90
 
 ### References
 
